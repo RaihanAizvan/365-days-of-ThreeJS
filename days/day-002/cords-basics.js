@@ -33,3 +33,14 @@ const yAxisPoint = { x: 0, y: 3, z: 0 }
  * changing z moves forward or backward
  */
 const zAxisPoint = { x: 0, y: 0, z: -4 }
+/**
+ * combining axes
+ *
+ * a real position usually changes more than one axis
+ */
+const combinedPosition = { x: 5, y: 3, z: -4 }
+
+/**
+ * this single object describes one point in space
+ * this is how objects are placed in graphics
+ */
