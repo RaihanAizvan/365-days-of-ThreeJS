@@ -44,3 +44,14 @@ const combinedPosition = { x: 5, y: 3, z: -4 }
  * this single object describes one point in space
  * this is how objects are placed in graphics
  */
+
+
+/**
+ * relation to 3d graphics
+ *
+ * cameras objects and lights all use coordinates
+ * changing numbers changes where things appear
+ *
+ * three js uses this idea through vector3
+ * but the concept stays the same
+ */
