@@ -61,3 +61,18 @@ const directionToTarget = getDirection(
  * this direction tells where to face
  * not where the object currently exists
  */
+
+
+/**
+ * rules to remember
+ * pelase remember theseee rules 
+ * position + position makes no sense
+ * direction + direction makes sense
+ *
+ * position + direction produces a new position
+ *
+ * position answers where
+ * direction answers which way
+ *
+ * mixing these concepts causes visual bugs
+ */
