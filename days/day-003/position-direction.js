@@ -33,3 +33,31 @@ const directionForward = { x: 0, y: 0, z: -1 }
  * directions are relative
  * they make sense only when applied to a position
  */
+
+
+/**
+ * direction from two positions
+ *
+ * direction can be calculated using two positions
+ * target - position gives direction
+ */
+function getDirection(from, to) {
+  return {
+    x: to.x - from.x,
+    y: to.y - from.y,
+    z: to.z - from.z
+  }
+}
+
+const objectPosition = { x: 1, y: 1, z: 1 }
+const targetPosition = { x: 4, y: 3, z: -2 }
+
+const directionToTarget = getDirection(
+  objectPosition,
+  targetPosition
+)
+
+/**
+ * this direction tells where to face
+ * not where the object currently exists
+ */
