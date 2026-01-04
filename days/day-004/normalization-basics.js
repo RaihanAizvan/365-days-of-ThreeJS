@@ -66,3 +66,13 @@ const normalizedDirection = normalize(direction)
  * normalized directions ensure consistency
  * speed distance and rotation can be controlled separately
  */
+
+/**
+ * relation to three js
+ *
+ * three js provides normalize internally
+ * but it follows the same math
+ *
+ * understanding this helps avoid bugs
+ * especially with cameras lights and raycasting
+ */
