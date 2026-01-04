@@ -55,3 +55,14 @@ const normalizedDirection = normalize(direction)
  * normalizedDirection points the same way
  * but its length is now one
  */
+/**
+ * why normalization matters
+ *
+ * unnormalized directions cause inconsistent behavior
+ * faster movement
+ * uneven rotation
+ * incorrect camera behavior
+ *
+ * normalized directions ensure consistency
+ * speed distance and rotation can be controlled separately
+ */
