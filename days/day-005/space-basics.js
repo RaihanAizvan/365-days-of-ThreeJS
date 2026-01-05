@@ -60,3 +60,29 @@ const childWorldPosition = localToWorld(
 /**
  * this is how nested objects work in 3d
  */
+
+
+/**
+ * why local and world space matters
+ *
+ * moving a parent moves all children
+ * rotating a parent rotates all children
+ *
+ * this is how models cameras and groups work
+ *
+ * misunderstanding spaces causes bugs
+ * objects appear in wrong places
+ */
+
+
+/**
+ * relation to three js
+ *
+ * object position is local by default
+ * scene is the root world space
+ *
+ * groups create local spaces
+ * three js handles conversion internally
+ *
+ * knowing this helps with transforms and debugging
+ */
