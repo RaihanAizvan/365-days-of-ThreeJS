@@ -36,3 +36,27 @@ const parentPosition = { x: 10, y: 0, z: 0 }
  * this position is relative to the parent
  */
 const childLocalPosition = { x: 2, y: 1, z: 0 }
+
+
+/**
+ * converting local space to world space
+ *
+ * child world position equals
+ * parent world position plus child local position
+ */
+function localToWorld(parent, local) {
+  return {
+    x: parent.x + local.x,
+    y: parent.y + local.y,
+    z: parent.z + local.z
+  }
+}
+
+const childWorldPosition = localToWorld(
+  parentPosition,
+  childLocalPosition
+)
+
+/**
+ * this is how nested objects work in 3d
+ */
