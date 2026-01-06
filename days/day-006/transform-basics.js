@@ -62,3 +62,30 @@ function applyScale(pos, scale) {
 }
 
 const scaledPosition = applyScale(position, scale)
+
+/**
+ * rotation
+ *
+ * rotation changes orientation
+ * not position or size
+ *
+ * rotation usually happens around an axis
+ * x axis y axis or z axis
+ */
+
+/**
+ * rotation around y axis
+ *
+ * cosine and sine control circular movement
+ */
+function rotateY(pos, angle) {
+  return {
+    x: pos.x * Math.cos(angle) - pos.z * Math.sin(angle),
+    y: pos.y,
+    z: pos.x * Math.sin(angle) + pos.z * Math.cos(angle)
+  }
+}
+
+const angle = Math.PI / 2
+const rotatedPosition = rotateY(position, angle)
+
