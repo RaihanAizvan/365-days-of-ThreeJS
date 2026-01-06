@@ -31,3 +31,34 @@ function translate(pos, offset) {
 }
 
 const translatedPosition = translate(position, translation)
+
+
+/**
+ * scale
+ *
+ * scale changes the size of an object
+ * it does not change the position
+ */
+
+/**
+ * scale factors
+ *
+ * values greater than one enlarge
+ * values between zero and one shrink
+ */
+const scale = { x: 2, y: 1.5, z: 1 }
+
+/**
+ * apply scale
+ *
+ * scale multiplies each axis
+ */
+function applyScale(pos, scale) {
+  return {
+    x: pos.x * scale.x,
+    y: pos.y * scale.y,
+    z: pos.z * scale.z
+  }
+}
+
+const scaledPosition = applyScale(position, scale)
