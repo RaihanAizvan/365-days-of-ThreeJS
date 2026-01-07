@@ -25,3 +25,54 @@ let state = {
 function update() {
   state.x = state.x + 1
 }
+
+
+/**
+ * render step
+ *
+ * rendering means reading current state
+ * and drawing it to the screen
+ *
+ * update changes data
+ * render shows data
+ */
+function render() {
+  const snapshot = {
+    x: state.x,
+    y: state.y
+  }
+}
+
+
+
+/**
+ * render loop
+ *
+ * a render loop repeats update and render
+ * again and again
+ *
+ * this loop creates motion and interaction
+ */
+function loop() {
+  update()
+  render()
+}
+
+/**
+ * imagine loop being called many times per second
+ * this is how smooth visuals are created
+ */
+
+/**
+ * relation to browser and three js
+ *
+ * browsers provide requestanimationframe
+ * which runs a function before the next frame
+ *
+ * three js uses this internally
+ * but the idea stays the same
+ *
+ * update state
+ * render scene
+ * repeat
+ */
