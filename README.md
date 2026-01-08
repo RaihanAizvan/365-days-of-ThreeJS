@@ -13,3 +13,4 @@ The early days focus on the fundamentals (vectors, coordinates, normalization, t
 - Day 005 — local space vs world space (`days/day-005`)
 - Day 006 — transformations (`days/day-006`)
 - Day 007 — rendering and frames (`days/day-007`)
+- Day 008 — three js scene setup (`days/day-008`)
