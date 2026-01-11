@@ -16,3 +16,4 @@ The early days focus on the fundamentals (vectors, coordinates, normalization, t
 - Day 008 — three js scene setup (`days/day-008`)
 - Day 009 — webgl context (`days/day-009`)
 - Day 010 — gpu architecture (`days/day-010`)
+- Day 011 — three js abstraction (`days/day-011`)
