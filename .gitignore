@@ -3,3 +3,7 @@ learning-map.txt
 
 # editor / local tooling
 .history/
+
+# node / build output
+node_modules/
+dist/
