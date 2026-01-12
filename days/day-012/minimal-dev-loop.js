@@ -33,7 +33,17 @@
  * 2) edit files
  * 3) reload browser
  *
- * note: no hot reload here (yet).
+ * note: if you use vite, you get auto reload / HMR.
+ */
+
+/**
+ * vite option (recommended once you have multiple demos)
+ *
+ * 1) npm install
+ * 2) npm run dev
+ *
+ * then open the printed url and navigate directly to a demo html, e.g:
+ * - /days/day-009/demo/index.html
  */
 
 /**
