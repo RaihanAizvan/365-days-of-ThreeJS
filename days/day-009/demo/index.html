@@ -39,15 +39,7 @@
       }
     </style>
 
-    <!-- CDN-only ES modules using import maps -->
-    <script type="importmap">
-      {
-        "imports": {
-          "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
-          "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
-        }
-      }
-    </script>
+    <!-- Vite will resolve `import * as THREE from 'three'` from node_modules -->
   </head>
 
   <body>
