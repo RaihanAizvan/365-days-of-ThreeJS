@@ -18,3 +18,4 @@ The early days focus on the fundamentals (vectors, coordinates, normalization, t
 - Day 010 — gpu architecture (`days/day-010`)
 - Day 011 — three js abstraction (`days/day-011`)
 - Day 012 — project tooling (`days/day-012`)
+- Day 013 — scene construction (`days/day-013`)
