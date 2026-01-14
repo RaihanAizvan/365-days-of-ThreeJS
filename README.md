@@ -19,3 +19,4 @@ The early days focus on the fundamentals (vectors, coordinates, normalization, t
 - Day 011 — three js abstraction (`days/day-011`)
 - Day 012 — project tooling (`days/day-012`)
 - Day 013 — scene construction (`days/day-013`)
+- Day 014 — basic mesh (`days/day-014`)
