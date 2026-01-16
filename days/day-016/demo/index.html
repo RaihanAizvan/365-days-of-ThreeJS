@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day 16 — Renderer Configuration</title>
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background: #0f0f12;
+      }
+      canvas {
+        display: block;
+      }
+      #hud {
+        position: fixed;
+        left: 12px;
+        top: 12px;
+        padding: 10px 12px;
+        background: rgba(0, 0, 0, 0.55);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        border-radius: 8px;
+        color: #eaeaf0;
+        font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+        font-size: 13px;
+        line-height: 1.4;
+        max-width: 560px;
+      }
+      #hud label {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin-right: 12px;
+      }
+      #hud input[type='range'] {
+        width: 180px;
+      }
+      #hud select {
+        margin-left: 6px;
+      }
+      #hud code {
+        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+        font-size: 12px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="hud">
+      <div><strong>Day 16</strong> — Renderer Configuration</div>
+      <div style="opacity: 0.85">
+        This demo shows how pixel ratio + tone mapping + exposure change the final image.
+      </div>
+
+      <div style="margin-top: 10px">
+        <label>
+          Pixel ratio cap
+          <select id="pixelRatioCap">
+            <option value="1">1</option>
+            <option value="1.5">1.5</option>
+            <option value="2" selected>2</option>
+            <option value="3">3</option>
+          </select>
+        </label>
+
+        <label>
+          Tone mapping
+          <select id="toneMapping">
+            <option value="none">None</option>
+            <option value="aces" selected>ACES Filmic</option>
+            <option value="reinhard">Reinhard</option>
+            <option value="cineon">Cineon</option>
+          </select>
+        </label>
+      </div>
+
+      <div style="margin-top: 10px">
+        <label>
+          Exposure
+          <input id="exposure" type="range" min="0" max="2" step="0.01" value="1" />
+          <span id="exposureValue"><code>1.00</code></span>
+        </label>
+      </div>
+
+      <div style="margin-top: 10px; opacity: 0.85">
+        Watch console: <code>renderer.info</code> and current config gets logged.
+      </div>
+    </div>
+
+    <canvas id="webgl"></canvas>
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>
