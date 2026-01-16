@@ -21,3 +21,4 @@ The early days focus on the fundamentals (vectors, coordinates, normalization, t
 - Day 013 — scene construction (`days/day-013`)
 - Day 014 — basic mesh (`days/day-014`)
 - Day 015 — camera perspectives (`days/day-015`)
+- Day 016 — renderer configuration (`days/day-016`)
