@@ -22,3 +22,4 @@ The early days focus on the fundamentals (vectors, coordinates, normalization, t
 - Day 014 — basic mesh (`days/day-014`)
 - Day 015 — camera perspectives (`days/day-015`)
 - Day 016 — renderer configuration (`days/day-016`)
+- Day 017 — object positioning (`days/day-017`)
