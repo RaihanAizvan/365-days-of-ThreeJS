@@ -23,3 +23,4 @@ The early days focus on the fundamentals (vectors, coordinates, normalization, t
 - Day 015 — camera perspectives (`days/day-015`)
 - Day 016 — renderer configuration (`days/day-016`)
 - Day 017 — object positioning (`days/day-017`)
+- Day 018 — scale transformations (`days/day-018`)
