@@ -25,3 +25,4 @@ The early days focus on the fundamentals (vectors, coordinates, normalization, t
 - Day 017 — object positioning (`days/day-017`)
 - Day 018 — scale transformations (`days/day-018`)
 - Day 019 — rotation principles (`days/day-019`)
+- Day 020 — grouping logic (`days/day-020`)
