@@ -27,3 +27,4 @@ The early days focus on the fundamentals (vectors, coordinates, normalization, t
 - Day 019 — rotation principles (`days/day-019`)
 - Day 020 — grouping logic (`days/day-020`)
 - Day 021 — euler angles (`days/day-021`)
+- Day 022 — quaternion math (`days/day-022`)
