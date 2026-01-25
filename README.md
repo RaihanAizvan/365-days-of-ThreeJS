@@ -30,3 +30,4 @@ The early days focus on the fundamentals (vectors, coordinates, normalization, t
 - Day 022 — quaternion math (`days/day-022`)
 - Day 023 — local space (`days/day-023`)
 - Day 024 — world space (`days/day-024`)
+- Day 025 — animation loop (`days/day-025`)
