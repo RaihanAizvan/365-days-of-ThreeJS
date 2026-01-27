@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day 27 — Frame Deltas</title>
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background: #0f0f12;
+      }
+      canvas {
+        display: block;
+      }
+      #hud {
+        position: fixed;
+        left: 12px;
+        top: 12px;
+        padding: 10px 12px;
+        background: rgba(0, 0, 0, 0.55);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        border-radius: 8px;
+        color: #eaeaf0;
+        font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+        font-size: 13px;
+        line-height: 1.4;
+        max-width: 920px;
+      }
+      #hud label {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin-right: 12px;
+      }
+      #hud input[type='range'] {
+        width: 220px;
+      }
+      #hud code {
+        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+        font-size: 12px;
+      }
+      #chart {
+        position: fixed;
+        left: 12px;
+        bottom: 12px;
+        width: 380px;
+        height: 120px;
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        border-radius: 8px;
+        background: rgba(0, 0, 0, 0.4);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="hud">
+      <div><strong>Day 27</strong> — Frame Deltas (dt)</div>
+      <div style="opacity: 0.85">
+        Blue cube moves with <code>raw dt</code>. Yellow cube moves with <code>smoothed dt</code>.
+        Graph shows raw (white) vs smoothed (green) dt.
+      </div>
+
+      <div style="margin-top: 10px">
+        <label>
+          Max dt clamp
+          <input id="maxDt" type="range" min="0.01" max="0.2" step="0.01" value="0.05" />
+          <span id="maxDtVal"><code>0.05</code></span>
+        </label>
+
+        <label>
+          Smooth alpha
+          <input id="alpha" type="range" min="0" max="1" step="0.01" value="0.2" />
+          <span id="alphaVal"><code>0.20</code></span>
+        </label>
+      </div>
+
+      <div id="stats" style="opacity: 0.85; margin-top: 6px">dt: -</div>
+      <div style="opacity: 0.85; margin-top: 6px">
+        Tip: switch tabs for a moment to create a dt spike.
+      </div>
+    </div>
+
+    <canvas id="webgl"></canvas>
+    <canvas id="chart" width="380" height="120" aria-label="dt chart"></canvas>
+
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>
