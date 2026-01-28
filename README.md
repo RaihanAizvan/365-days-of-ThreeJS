@@ -33,3 +33,4 @@ The early days focus on the fundamentals (vectors, coordinates, normalization, t
 - Day 025 — animation loop (`days/day-025`)
 - Day 026 — clock mechanisms (`days/day-026`)
 - Day 027 — frame deltas (`days/day-027`)
+- Day 028 — interaction loops (`days/day-028`)
