@@ -35,3 +35,4 @@ The early days focus on the fundamentals (vectors, coordinates, normalization, t
 - Day 027 — frame deltas (`days/day-027`)
 - Day 028 — interaction loops (`days/day-028`)
 - Day 029 — viewport scaling (`days/day-029`)
+- Day 030 — pixel ratios (`days/day-030`)
