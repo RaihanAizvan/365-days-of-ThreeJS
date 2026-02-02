@@ -38,3 +38,4 @@ The early days focus on the fundamentals (vectors, coordinates, normalization, t
 - Day 030 — pixel ratios (`days/day-030`)
 - Day 031 — buffergeometry basics (`days/day-031`)
 - Day 032 — vertex attributes (`days/day-032`)
+- Day 033 — index buffers (`days/day-033`)
