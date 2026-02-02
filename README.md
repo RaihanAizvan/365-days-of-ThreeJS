@@ -37,3 +37,4 @@ The early days focus on the fundamentals (vectors, coordinates, normalization, t
 - Day 029 — viewport scaling (`days/day-029`)
 - Day 030 — pixel ratios (`days/day-030`)
 - Day 031 — buffergeometry basics (`days/day-031`)
+- Day 032 — vertex attributes (`days/day-032`)
