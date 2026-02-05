@@ -41,3 +41,4 @@ The early days focus on the fundamentals (vectors, coordinates, normalization, t
 - Day 033 — index buffers (`days/day-033`)
 - Day 034 — primitive shapes (`days/day-034`)
 - Day 035 — plane geometries (`days/day-035`)
+- Day 036 — box geometries (`days/day-036`)
