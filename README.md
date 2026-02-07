@@ -43,3 +43,4 @@ The early days focus on the fundamentals (vectors, coordinates, normalization, t
 - Day 035 — plane geometries (`days/day-035`)
 - Day 036 — box geometries (`days/day-036`)
 - Day 037 — sphere geometries (`days/day-037`)
+- Day 038 — geometry attributes (`days/day-038`)
