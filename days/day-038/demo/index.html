@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day 38 — Geometry Attributes</title>
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background: #0f0f12;
+      }
+      canvas {
+        display: block;
+      }
+      #hud {
+        position: fixed;
+        left: 12px;
+        top: 12px;
+        padding: 10px 12px;
+        background: rgba(0, 0, 0, 0.55);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        border-radius: 8px;
+        color: #eaeaf0;
+        font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+        font-size: 13px;
+        line-height: 1.4;
+        max-width: 860px;
+      }
+      #hud code {
+        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+        font-size: 12px;
+      }
+      #hud button {
+        margin-top: 8px;
+        padding: 6px 10px;
+        border-radius: 6px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        background: rgba(255, 255, 255, 0.06);
+        color: inherit;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="hud">
+      <div><strong>Day 38</strong> — Geometry Attributes</div>
+      <div style="opacity: 0.85">
+        Click to update the <code>position</code> attribute (y offsets) and see the mesh deform.
+      </div>
+      <button id="randomize">Randomize heights</button>
+      <div style="opacity: 0.85; margin-top: 6px">
+        Open console to see attribute counts and values.
+      </div>
+    </div>
+
+    <canvas id="webgl"></canvas>
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>
