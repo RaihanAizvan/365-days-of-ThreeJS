@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day 39 — Debugging UI</title>
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background: #0f0f12;
+      }
+      canvas {
+        display: block;
+      }
+      #hud {
+        position: fixed;
+        left: 12px;
+        top: 12px;
+        padding: 10px 12px;
+        background: rgba(0, 0, 0, 0.6);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        border-radius: 8px;
+        color: #eaeaf0;
+        font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+        font-size: 13px;
+        line-height: 1.4;
+        max-width: 360px;
+      }
+      #hud label {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        align-items: center;
+        gap: 8px;
+        margin-top: 8px;
+      }
+      #hud input[type='range'] {
+        width: 160px;
+      }
+      #hud input[type='color'] {
+        width: 40px;
+        height: 24px;
+        padding: 0;
+        border: none;
+        background: transparent;
+      }
+      #hud code {
+        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+        font-size: 12px;
+      }
+      #hud .value {
+        justify-self: end;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="hud">
+      <div><strong>Day 39</strong> — Debugging UI</div>
+      <div style="opacity: 0.85">
+        Use the sliders to tweak light intensity, rotation speed, and color.
+      </div>
+
+      <label>
+        Light intensity
+        <input id="intensity" type="range" min="0" max="3" step="0.01" value="1.2" />
+      </label>
+      <div class="value" id="intensityVal"><code>1.20</code></div>
+
+      <label>
+        Rotation speed
+        <input id="speed" type="range" min="0" max="3" step="0.01" value="0.8" />
+      </label>
+      <div class="value" id="speedVal"><code>0.80</code></div>
+
+      <label>
+        Mesh color
+        <input id="color" type="color" value="#4aa3ff" />
+      </label>
+      <div class="value" id="colorVal"><code>#4aa3ff</code></div>
+    </div>
+
+    <canvas id="webgl"></canvas>
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>
