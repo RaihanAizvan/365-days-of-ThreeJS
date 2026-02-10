@@ -46,3 +46,4 @@ The early days focus on the fundamentals (vectors, coordinates, normalization, t
 - Day 038 — geometry attributes (`days/day-038`)
 - Day 039 — debugging ui (`days/day-039`)
 - Day 040 — tweakpane setup (`days/day-040`)
+- Day 041 — parameter mapping (`days/day-041`)
