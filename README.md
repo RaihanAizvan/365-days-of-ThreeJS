@@ -48,3 +48,4 @@ The early days focus on the fundamentals (vectors, coordinates, normalization, t
 - Day 040 — tweakpane setup (`days/day-040`)
 - Day 041 — parameter mapping (`days/day-041`)
 - Day 042 — visual feedback (`days/day-042`)
+- Day 043 — texture basics (`days/day-043`)
