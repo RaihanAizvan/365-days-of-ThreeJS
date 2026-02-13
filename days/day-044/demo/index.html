@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day 44 - Image Formats Demo</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Courier New', monospace;
+      background: #1a1a1a;
+      color: #e0e0e0;
+      line-height: 1.6;
+    }
+
+    #canvas {
+      display: block;
+      width: 100%;
+      height: 100vh;
+    }
+
+    .ui {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      background: rgba(0, 0, 0, 0.8);
+      padding: 20px;
+      border-radius: 8px;
+      max-width: 400px;
+      border: 1px solid #444;
+    }
+
+    .ui h2 {
+      margin-bottom: 15px;
+      color: #00ff88;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .format-info {
+      margin-bottom: 20px;
+      padding: 12px;
+      background: rgba(255, 255, 255, 0.05);
+      border-left: 3px solid #00ff88;
+      border-radius: 4px;
+    }
+
+    .format-info h3 {
+      color: #00ff88;
+      font-size: 12px;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+    }
+
+    .format-info p {
+      font-size: 11px;
+      line-height: 1.5;
+      color: #b0b0b0;
+    }
+
+    .stats {
+      margin-top: 15px;
+      padding: 12px;
+      background: rgba(255, 255, 255, 0.05);
+      border-left: 3px solid #ff6600;
+      border-radius: 4px;
+      font-size: 11px;
+    }
+
+    .stat-line {
+      margin: 4px 0;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .stat-label {
+      color: #b0b0b0;
+    }
+
+    .stat-value {
+      color: #00ff88;
+      font-weight: bold;
+    }
+
+    .button-group {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-top: 15px;
+    }
+
+    button {
+      padding: 6px 12px;
+      background: #00ff88;
+      color: #000;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 11px;
+      font-weight: bold;
+      text-transform: uppercase;
+      transition: all 0.2s;
+      font-family: 'Courier New', monospace;
+    }
+
+    button:hover {
+      background: #00dd77;
+      transform: scale(1.05);
+    }
+
+    button.active {
+      background: #ff6600;
+      color: #fff;
+    }
+
+    .comparison {
+      margin-top: 20px;
+      padding: 12px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 4px;
+      font-size: 10px;
+    }
+
+    .comparison h4 {
+      color: #00ff88;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      font-size: 11px;
+    }
+
+    .format-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      margin: 6px 0;
+      padding: 6px;
+      background: rgba(255, 255, 255, 0.02);
+      border-radius: 3px;
+    }
+
+    .format-name {
+      color: #ffaa00;
+      font-weight: bold;
+    }
+
+    .format-detail {
+      color: #888;
+      font-size: 9px;
+    }
+
+    .info-text {
+      margin-top: 10px;
+      font-size: 10px;
+      color: #888;
+      line-height: 1.4;
+    }
+  </style>
+</head>
+<body>
+  <div id="canvas-container"></div>
+
+  <div class="ui">
+    <h2>📊 Image Format Demo</h2>
+
+    <div class="format-info">
+      <h3 id="formatName">PNG</h3>
+      <p id="formatDesc">Lossless compression with full transparency support</p>
+    </div>
+
+    <div class="stats">
+      <div class="stat-line">
+        <span class="stat-label">Format Size (512×512):</span>
+        <span class="stat-value" id="sizeValue">~512 KB</span>
+      </div>
+      <div class="stat-line">
+        <span class="stat-label">Compression:</span>
+        <span class="stat-value" id="compressionValue">Lossless</span>
+      </div>
+      <div class="stat-line">
+        <span class="stat-label">Transparency:</span>
+        <span class="stat-value" id="transparencyValue">Full RGBA</span>
+      </div>
+      <div class="stat-line">
+        <span class="stat-label">Use Case:</span>
+        <span class="stat-value" id="useCaseValue">Graphics</span>
+      </div>
+    </div>
+
+    <div class="button-group">
+      <button class="format-btn active" data-format="png">PNG</button>
+      <button class="format-btn" data-format="jpeg">JPEG</button>
+      <button class="format-btn" data-format="webp">WebP</button>
+      <button class="format-btn" data-format="hdr">HDR</button>
+    </div>
+
+    <div class="comparison">
+      <h4>Format Comparison (512×512)</h4>
+      <div class="format-row">
+        <span class="format-name">PNG</span>
+        <span class="format-detail">512 KB, Lossless</span>
+      </div>
+      <div class="format-row">
+        <span class="format-name">JPEG</span>
+        <span class="format-detail">~85 KB, Lossy</span>
+      </div>
+      <div class="format-row">
+        <span class="format-name">WebP</span>
+        <span class="format-detail">~70 KB, Lossy/Lossless</span>
+      </div>
+      <div class="format-row">
+        <span class="format-name">HDR</span>
+        <span class="format-detail">~200 KB, Float32</span>
+      </div>
+    </div>
+
+    <div class="info-text">
+      <strong>💡 Tip:</strong> Choose formats based on content type. Photos? JPEG/WebP. Graphics? PNG. HDR lighting? EXR/HDR.
+    </div>
+  </div>
+
+  <script type="module" src="./demo.js"></script>
+</body>
+</html>
