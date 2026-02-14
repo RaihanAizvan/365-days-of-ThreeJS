@@ -49,3 +49,5 @@ The early days focus on the fundamentals (vectors, coordinates, normalization, t
 - Day 041 — parameter mapping (`days/day-041`)
 - Day 042 — visual feedback (`days/day-042`)
 - Day 043 — texture basics (`days/day-043`)
+- Day 044 — image formats (`days/day-044`)
+- Day 045 — texture loading (`days/day-045`)
