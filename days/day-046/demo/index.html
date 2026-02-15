@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day 46 — UV Mapping</title>
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background: #0f0f12;
+        color: #f5f5f5;
+        font-family: system-ui, sans-serif;
+      }
+      canvas {
+        display: block;
+      }
+      .panel {
+        position: fixed;
+        top: 12px;
+        left: 12px;
+        padding: 12px 14px;
+        background: rgba(0, 0, 0, 0.6);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 8px;
+        max-width: 260px;
+      }
+      label {
+        display: block;
+        font-size: 12px;
+        margin-top: 8px;
+      }
+      input[type='range'] {
+        width: 100%;
+      }
+      .value {
+        float: right;
+        color: #9fd3ff;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="webgl"></canvas>
+    <div class="panel">
+      <div><strong>UV Mapping Controls</strong></div>
+      <label>
+        Repeat U
+        <span class="value" id="repeat-u-value">2.0</span>
+        <input id="repeat-u" type="range" min="1" max="6" step="0.1" value="2" />
+      </label>
+      <label>
+        Repeat V
+        <span class="value" id="repeat-v-value">2.0</span>
+        <input id="repeat-v" type="range" min="1" max="6" step="0.1" value="2" />
+      </label>
+      <label>
+        Offset U
+        <span class="value" id="offset-u-value">0.0</span>
+        <input id="offset-u" type="range" min="0" max="1" step="0.01" value="0" />
+      </label>
+      <label>
+        Offset V
+        <span class="value" id="offset-v-value">0.0</span>
+        <input id="offset-v" type="range" min="0" max="1" step="0.01" value="0" />
+      </label>
+    </div>
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>
