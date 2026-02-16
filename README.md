@@ -52,3 +52,4 @@ The early days focus on the fundamentals (vectors, coordinates, normalization, t
 - Day 044 — image formats (`days/day-044`)
 - Day 045 — texture loading (`days/day-045`)
 - Day 046 — uv mapping (`days/day-046`)
+- Day 047 — color management (`days/day-047`)
