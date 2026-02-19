@@ -55,3 +55,4 @@ The early days focus on the fundamentals (vectors, coordinates, normalization, t
 - Day 047 — color management (`days/day-047`)
 - Day 048 — mipmapping logic (`days/day-048`)
 - Day 049 — filtering modes (`days/day-049`)
+- Day 050 — anisotropy theory (`days/day-050`)
