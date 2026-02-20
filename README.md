@@ -56,3 +56,4 @@ The early days focus on the fundamentals (vectors, coordinates, normalization, t
 - Day 048 — mipmapping logic (`days/day-048`)
 - Day 049 — filtering modes (`days/day-049`)
 - Day 050 — anisotropy theory (`days/day-050`)
+- Day 051 — repeat wrapping (`days/day-051`)
