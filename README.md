@@ -57,3 +57,4 @@ The early days focus on the fundamentals (vectors, coordinates, normalization, t
 - Day 049 — filtering modes (`days/day-049`)
 - Day 050 — anisotropy theory (`days/day-050`)
 - Day 051 — repeat wrapping (`days/day-051`)
+- Day 052 — mirror wrapping (`days/day-052`)
