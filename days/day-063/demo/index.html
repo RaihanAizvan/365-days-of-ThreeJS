@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>day 63 cube textures</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      overflow: hidden;
+      font-family: monospace;
+      background-color: #000;
+    }
+    canvas {
+      display: block;
+    }
+    .label {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      padding: 8px 10px;
+      background: rgba(0, 0, 0, 0.6);
+      color: #fff;
+      font-size: 14px;
+      line-height: 1.4;
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="label">
+    day 63: cube textures<br />
+    skybox & environment mapping
+  </div>
+  <script type="module" src="./main.js"></script>
+</body>
+</html>
