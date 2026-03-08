@@ -71,3 +71,4 @@ The early days focus on the fundamentals (vectors, coordinates, normalization, t
 - Day 063 — cube textures (`days/day-063`)
 - Day 064 — hdr environment maps (`days/day-064`)
 - Day 065 — gltf loading basics (`days/day-065`)
+- Day 066 — gltf animations (`days/day-066`)
