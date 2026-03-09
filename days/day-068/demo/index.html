@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>day 068 - animation blending & crossfading</title>
+    <style>
+        body { margin: 0; overflow: hidden; background: #0b0b0b; color: white; font-family: 'Outfit', sans-serif; }
+        canvas { display: block; }
+        #overlay {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            pointer-events: none;
+            background: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(10px);
+            padding: 20px;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        h1 { margin: 0; font-size: 1.2rem; text-transform: lowercase; letter-spacing: 1px; color: #4facfe; }
+        p { margin: 5px 0 0; font-size: 0.9rem; opacity: 0.7; }
+        .controls {
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 15px;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 10px;
+            border-radius: 50px;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        button {
+            padding: 12px 28px;
+            border-radius: 25px;
+            border: none;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: lowercase;
+            font-weight: 500;
+        }
+        button.active {
+            background: #4facfe;
+            box-shadow: 0 0 20px rgba(79, 172, 254, 0.4);
+        }
+        button:hover:not(.active) {
+            background: rgba(255, 255, 255, 0.2);
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="overlay">
+        <h1>day 068: animation blending</h1>
+        <p>smoothly transitioning between clip weights</p>
+    </div>
+    <div class="controls">
+        <button id="btn-idle" class="active">idle state</button>
+        <button id="btn-action">action state</button>
+    </div>
+    <script type="module" src="./main.js"></script>
+</body>
+</html>
