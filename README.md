@@ -73,3 +73,4 @@ The early days focus on the fundamentals (vectors, coordinates, normalization, t
 - Day 065 — gltf loading basics (`days/day-065`)
 - Day 066 — gltf animations (`days/day-066`)
 - Day 067 — skinned meshes & bones (`days/day-067`)
+- Day 068 — animation blending & crossfading (`days/day-068`)
