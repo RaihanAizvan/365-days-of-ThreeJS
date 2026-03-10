@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>day 069 - raycasting & interactivity</title>
+    <style>
+        body { margin: 0; overflow: hidden; background: #050505; color: white; font-family: 'Outfit', sans-serif; }
+        canvas { display: block; }
+        #ui {
+            position: absolute;
+            top: 25px;
+            left: 25px;
+            pointer-events: none;
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(15px);
+            padding: 24px;
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            max-width: 280px;
+        }
+        h1 { margin: 0; font-size: 1.1rem; letter-spacing: 2px; color: #00f2fe; text-transform: lowercase; }
+        p { margin: 8px 0 0; font-size: 0.85rem; line-height: 1.4; opacity: 0.6; }
+        .hint {
+            margin-top: 15px;
+            font-size: 0.75rem;
+            color: #4facfe;
+            text-transform: lowercase;
+            font-weight: 500;
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="ui">
+        <h1>day 069: raycasting</h1>
+        <p>hover over the floating geometries to trigger intersections. the colored glow indicates a hit.</p>
+        <div class="hint">move your mouse to interact</div>
+    </div>
+    <script type="module" src="./main.js"></script>
+</body>
+</html>
