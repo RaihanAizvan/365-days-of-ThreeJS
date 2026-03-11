@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>day 070 - scroll logic & parallax</title>
+    <style>
+        body { margin: 0; background: #080808; color: white; font-family: 'Outfit', sans-serif; overflow-x: hidden; }
+        canvas { position: fixed; top: 0; left: 0; outline: none; z-index: -1; }
+        
+        section {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 0 10vw;
+            box-sizing: border-box;
+            text-transform: lowercase;
+        }
+
+        .content {
+            background: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(10px);
+            padding: 40px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            max-width: 400px;
+        }
+
+        h1 { font-size: 2.5rem; margin: 0; color: #f77062; }
+        p { opacity: 0.6; line-height: 1.6; }
+
+        section:nth-child(even) { justify-content: flex-end; }
+        section:nth-child(even) h1 { color: #fe5196; }
+
+        .hint {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 0.8rem;
+            opacity: 0.3;
+            letter-spacing: 2px;
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <canvas id="webgl"></canvas>
+
+    <section>
+        <div class="content">
+            <h1>the foundation</h1>
+            <p>scroll down to see the parallax magic happen.</p>
+        </div>
+    </section>
+
+    <section>
+        <div class="content">
+            <h1>the depth</h1>
+            <p>objects move at different speeds based on their distance.</p>
+        </div>
+    </section>
+
+    <section>
+        <div class="content">
+            <h1>the glide</h1>
+            <p>linear interpolation ensures every movement is buttery smooth.</p>
+        </div>
+    </section>
+
+    <div class="hint">scroll downwards</div>
+
+    <script type="module" src="./main.js"></script>
+</body>
+</html>
