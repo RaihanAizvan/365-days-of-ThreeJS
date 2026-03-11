@@ -76,4 +76,3 @@ The early days focus on the fundamentals (vectors, coordinates, normalization, t
 - Day 068 — animation blending & crossfading (`days/day-068`)
 - Day 069 — raycasting & interactivity (`days/day-069`)
 - Day 070 — scroll logic & parallax (`days/day-070`)
-- Day 070 — scroll logic & parallax (`days/day-070`)
