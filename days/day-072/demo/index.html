@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>day 072 - ambient & hemisphere lights</title>
+    <style>
+        body { margin: 0; overflow: hidden; background: #050508; color: white; font-family: 'Outfit', sans-serif; }
+        canvas { display: block; }
+        #ui {
+            position: absolute;
+            top: 40px;
+            left: 40px;
+            background: rgba(10, 10, 15, 0.8);
+            backdrop-filter: blur(25px);
+            padding: 30px;
+            border-radius: 24px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            max-width: 300px;
+            pointer-events: none;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+        }
+        h1 { margin: 0; font-size: 1.1rem; color: #4facfe; text-transform: lowercase; letter-spacing: 2px; }
+        p { margin: 12px 0 0; font-size: 0.85rem; opacity: 0.6; line-height: 1.6; }
+        .legend {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        .item { display: flex; align-items: center; gap: 10px; font-size: 0.75rem; text-transform: lowercase; }
+        .dot { width: 8px; height: 8px; border-radius: 50%; }
+        .sky { background: #b1e1ff; }
+        .ground { background: #b97a20; }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="ui">
+        <h1>day 072: environment fill</h1>
+        <p>using hemisphere lights to simulate atmospheric scattering and ground bounce. notice the color gradient on the spheres.</p>
+        <div class="legend">
+            <div class="item"><div class="dot sky"></div> <span>sky contribution</span></div>
+            <div class="item"><div class="dot ground"></div> <span>ground bounce</span></div>
+        </div>
+    </div>
+    <script type="module" src="./main.js"></script>
+</body>
+</html>
