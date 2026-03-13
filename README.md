@@ -78,3 +78,4 @@ The early days focus on the fundamentals (vectors, coordinates, normalization, t
 - Day 070 — scroll logic & parallax (`days/day-070`)
 - Day 071 — lighting fundamentals (`days/day-071`)
 - Day 072 — ambient intensity & hemisphere lights (`days/day-072`)
+- Day 073 — directional vectors & sun light (`days/day-073`)
