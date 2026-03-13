@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>day 073 - directional vectors & sun light</title>
+    <style>
+        body { margin: 0; overflow: hidden; background: #000; color: white; font-family: 'Outfit', sans-serif; }
+        canvas { display: block; }
+        #ui {
+            position: absolute;
+            top: 40px;
+            right: 40px;
+            background: rgba(15, 15, 20, 0.7);
+            backdrop-filter: blur(20px);
+            padding: 30px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            max-width: 260px;
+            pointer-events: none;
+            text-align: right;
+        }
+        h1 { margin: 0; font-size: 1rem; color: #ff9800; text-transform: lowercase; letter-spacing: 2px; }
+        p { margin: 10px 0 0; font-size: 0.8rem; opacity: 0.5; line-height: 1.6; }
+        .stats {
+            margin-top: 20px;
+            font-size: 0.7rem;
+            color: #ff9800;
+            font-weight: 500;
+            text-transform: uppercase;
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="ui">
+        <h1>day 073: parallel rays</h1>
+        <p>simulating the sun by animating a directional vector around a central target. watch the shadows lengthen as the "sun" sets.</p>
+        <div class="stats" id="time-display">time: 12:00 PM</div>
+    </div>
+    <script type="module" src="./main.js"></script>
+</body>
+</html>
