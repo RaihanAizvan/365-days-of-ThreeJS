@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>day 075 - spot cone</title>
+    <style>
+        body { margin: 0; overflow: hidden; background: #000; color: white; font-family: 'Outfit', sans-serif; }
+        canvas { display: block; }
+        #ui {
+            position: absolute;
+            top: 30px;
+            left: 30px;
+            background: rgba(10, 10, 15, 0.7);
+            backdrop-filter: blur(25px);
+            padding: 30px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            max-width: 320px;
+            pointer-events: none;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+        }
+        h1 { margin: 0; font-size: 1.15rem; color: #ffeb3b; text-transform: lowercase; letter-spacing: 1.5px; }
+        p { margin: 12px 0 0; font-size: 0.85rem; opacity: 0.6; line-height: 1.6; }
+        .details {
+            margin-top: 20px;
+            font-size: 0.75rem;
+            color: #ffeb3b;
+            opacity: 0.8;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 10px;
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="ui">
+        <h1>day 075: the spotlight</h1>
+        <p>animating light cones across the stage. noticing the penumbra effect softening the shadow edges.</p>
+        <div class="details">
+            <span>angle: 30°</span>
+            <span>penumbra: 0.5</span>
+        </div>
+    </div>
+    <script type="module" src="./main.js"></script>
+</body>
+</html>
