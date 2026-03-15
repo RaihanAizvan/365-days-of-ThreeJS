@@ -80,3 +80,4 @@ The early days focus on the fundamentals (vectors, coordinates, normalization, t
 - Day 072 — ambient intensity & hemisphere lights (`days/day-072`)
 - Day 073 — directional vectors & sun light (`days/day-073`)
 - Day 074 — point falloff (`days/day-074`)
+- Day 075 — spot cone (`days/day-075`)
