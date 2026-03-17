@@ -82,3 +82,4 @@ The early days focus on the fundamentals (vectors, coordinates, normalization, t
 - Day 074 — point falloff (`days/day-074`)
 - Day 075 — spot cone (`days/day-075`)
 - Day 076 — hemisphere gradients (`days/day-076`)
+- Day 077 — light decay (`days/day-077`)
