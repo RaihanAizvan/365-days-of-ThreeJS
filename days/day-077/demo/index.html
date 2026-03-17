@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>day 077 - light decay</title>
+    <style>
+        body { margin: 0; overflow: hidden; background: #000; color: white; font-family: 'Outfit', sans-serif; }
+        canvas { display: block; }
+        #ui {
+            position: absolute;
+            top: 30px;
+            left: 30px;
+            background: rgba(8, 8, 12, 0.85);
+            backdrop-filter: blur(25px);
+            padding: 30px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            max-width: 320px;
+            pointer-events: none;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+        }
+        h1 { margin: 0; font-size: 1.15rem; color: #a44fac; text-transform: lowercase; letter-spacing: 1.5px; }
+        p { margin: 12px 0 0; font-size: 0.85rem; opacity: 0.6; line-height: 1.6; }
+        .legend {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 15px;
+        }
+        .item { display: flex; align-items: center; gap: 12px; font-size: 0.8rem; text-transform: lowercase; }
+        .dot { width: 10px; height: 10px; border-radius: 50%; opacity: 0.8; }
+        .red { background: #ff3366; box-shadow: 0 0 10px #ff3366; }
+        .cyan { background: #00f2fe; box-shadow: 0 0 10px #00f2fe; }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="ui">
+        <h1>day 077: modeling reality</h1>
+        <p>comparing a perfectly linear distance falloff (decay: 1) against physically-correct inverse-square falloff (decay: 2). noticing how the physically correct light has a very bright core but fades endlessly, while the linear light drops steadily to black.</p>
+        <div class="legend">
+            <div class="item"><div class="dot red"></div> <span>linear (decay 1.0) — steady drop</span></div>
+            <div class="item"><div class="dot cyan"></div> <span>inverse sq (decay 2.0) — realistic drop</span></div>
+        </div>
+    </div>
+    <script type="module" src="./main.js"></script>
+</body>
+</html>
