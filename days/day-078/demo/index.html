@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>day 078 - light color</title>
+    <style>
+        body { margin: 0; overflow: hidden; background: #000; color: white; font-family: 'Outfit', sans-serif; }
+        canvas { display: block; }
+        #ui {
+            position: absolute;
+            top: 30px;
+            left: 30px;
+            background: rgba(10, 10, 10, 0.6);
+            backdrop-filter: blur(15px);
+            padding: 24px;
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            max-width: 320px;
+            pointer-events: none;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+        }
+        h1 { margin: 0; font-size: 1.1rem; color: #fff; text-transform: lowercase; letter-spacing: 2px; }
+        p { margin: 10px 0 0; font-size: 0.8rem; opacity: 0.6; line-height: 1.5; }
+        .legend {
+            margin-top: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 0.75rem;
+            opacity: 0.8;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 10px;
+        }
+        .color-box {
+            display: flex;
+            gap: 5px;
+        }
+        .box { width: 12px; height: 12px; border-radius: 2px; }
+        .r { background: #ff0000; box-shadow: 0 0 5px #ff0000; }
+        .g { background: #00ff00; box-shadow: 0 0 5px #00ff00; }
+        .b { background: #0000ff; box-shadow: 0 0 5px #0000ff; }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="ui">
+        <h1>day 078: additive mixing</h1>
+        <p>watch the primary red, green, and blue spotlights orbit the center. where they perfectly overlap on the white floor, they create pure white light.</p>
+        <div class="legend">
+            <span>R + G + B = White</span>
+            <div class="color-box">
+                <div class="box r"></div>
+                <div class="box g"></div>
+                <div class="box b"></div>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="./main.js"></script>
+</body>
+</html>
