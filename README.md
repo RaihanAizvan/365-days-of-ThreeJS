@@ -83,3 +83,4 @@ The early days focus on the fundamentals (vectors, coordinates, normalization, t
 - Day 075 — spot cone (`days/day-075`)
 - Day 076 — hemisphere gradients (`days/day-076`)
 - Day 077 — light decay (`days/day-077`)
+- Day 078 — light color (`days/day-078`)
