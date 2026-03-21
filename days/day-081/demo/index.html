@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>day 081 - shadow biasing</title>
+    <style>
+        body { margin: 0; overflow: hidden; background: #e0e0e0; font-family: 'Outfit', sans-serif; position: relative;}
+        canvas { display: block; }
+        #ui {
+            position: absolute;
+            top: 40px;
+            left: 40px;
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(15px);
+            padding: 25px;
+            border-radius: 16px;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            max-width: 320px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            color: #2c3e50;
+        }
+        h1 { margin: 0; font-size: 1.15rem; color: #e74c3c; text-transform: lowercase; letter-spacing: 1px; }
+        p { margin: 10px 0 20px; font-size: 0.85rem; opacity: 0.8; line-height: 1.5; }
+        .control-group { margin-bottom: 20px; }
+        .control-group label { display: block; font-size: 0.75rem; font-weight: bold; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 1px;}
+        input[type="range"] {
+            width: 100%;
+            cursor: pointer;
+            accent-color: #e74c3c;
+        }
+        .val { font-family: monospace; font-size: 0.8rem; background: #eee; padding: 2px 6px; border-radius: 4px; float: right;}
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="ui">
+        <h1>day 081: acne treatment</h1>
+        <p>drag the sliders to experience the destructive "shadow acne" artifacts on the spheres, and learn to tune out the noise dynamically using bias.</p>
+        
+        <div class="control-group">
+            <label>shadow.bias <span id="val-bias" class="val">0.0000</span></label>
+            <input type="range" id="bias" min="-0.01" max="0.01" step="0.0001" value="0">
+        </div>
+
+        <div class="control-group">
+            <label>shadow.normalBias <span id="val-nbias" class="val">0.0000</span></label>
+            <input type="range" id="nbias" min="0" max="0.1" step="0.001" value="0">
+        </div>
+    </div>
+    <script type="module" src="./main.js"></script>
+</body>
+</html>
