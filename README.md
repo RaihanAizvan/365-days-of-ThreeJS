@@ -87,3 +87,4 @@ The early days focus on the fundamentals (vectors, coordinates, normalization, t
 - Day 079 — shadow theory (`days/day-079`)
 - Day 080 — shadow mapping (`days/day-080`)
 - Day 081 — shadow biasing (`days/day-081`)
+- Day 082 — shadow resolution (`days/day-082`)
