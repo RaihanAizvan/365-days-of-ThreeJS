@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>day 084 - frustum management</title>
+    <style>
+        body { margin: 0; overflow: hidden; background: #000; color: #fff; font-family: 'Outfit', sans-serif;}
+        canvas { display: block; }
+        #ui {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: rgba(10, 10, 15, 0.9);
+            backdrop-filter: blur(15px);
+            padding: 25px;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            max-width: 320px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+            z-index: 10;
+        }
+        h1 { margin: 0; font-size: 1.15rem; color: #e67e22; text-transform: lowercase; letter-spacing: 1px; }
+        p { margin: 10px 0 20px; font-size: 0.8rem; line-height: 1.6; opacity: 0.8; }
+        
+        .control-group { margin-bottom: 20px; }
+        .control-group label { display: block; font-size: 0.75rem; font-weight: bold; margin-bottom: 8px; text-transform: uppercase; color: #aaa;}
+        input[type="range"] {
+            width: 100%;
+            cursor: pointer;
+            accent-color: #e67e22;
+        }
+        .val { font-family: monospace; font-size: 0.85rem; background: #222; padding: 2px 6px; border-radius: 4px; float: right; color:#fff;}
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="ui">
+        <h1>day 084: architectural clipping</h1>
+        <p>an extreme demonstration of near and far frustum planes dragging across geometry. watch objects instantly disappear as they are culled from rendering.</p>
+        
+        <div class="control-group">
+            <label>Near Plane <span id="val-near" class="val">0.1</span></label>
+            <input type="range" id="near" min="0.1" max="15" step="0.1" value="0.1">
+        </div>
+
+        <div class="control-group">
+            <label>Far Plane <span id="val-far" class="val">40</span></label>
+            <input type="range" id="far" min="5" max="40" step="0.5" value="40">
+        </div>
+    </div>
+
+    <!-- We will use a splitscreen view again to show the actual output VS the physical frustum -->
+    <script type="module" src="./main.js"></script>
+</body>
+</html>
