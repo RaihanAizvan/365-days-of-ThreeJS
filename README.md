@@ -88,3 +88,4 @@ The early days focus on the fundamentals (vectors, coordinates, normalization, t
 - Day 080 — shadow mapping (`days/day-080`)
 - Day 081 — shadow biasing (`days/day-081`)
 - Day 082 — shadow resolution (`days/day-082`)
+- Day 083 — camera helpers (`days/day-083`)
