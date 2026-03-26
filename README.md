@@ -90,3 +90,4 @@ The early days focus on the fundamentals (vectors, coordinates, normalization, t
 - Day 082 — shadow resolution (`days/day-082`)
 - Day 083 — camera helpers (`days/day-083`)
 - Day 084 — frustum management (`days/day-084`)
+- Day 085 — baking foundations (`days/day-085`)
