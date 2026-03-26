@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>day 085 - baking foundations</title>
+    <style>
+        body { margin: 0; overflow: hidden; background: #0a0a0a; color: white; font-family: 'Outfit', sans-serif;}
+        canvas { display: block; }
+        #ui {
+            position: absolute;
+            top: 40px;
+            left: 40px;
+            background: rgba(15, 15, 15, 0.85);
+            backdrop-filter: blur(20px);
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            max-width: 300px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+            z-index: 10;
+        }
+        h1 { margin: 0; font-size: 1.1rem; color: #9b59b6; text-transform: lowercase; letter-spacing: 1px; }
+        p { margin: 10px 0 20px; font-size: 0.85rem; line-height: 1.6; opacity: 0.8; }
+        
+        .control-group { margin-bottom: 20px; }
+        .control-group label { display: block; font-size: 0.75rem; font-weight: bold; margin-bottom: 8px; text-transform: uppercase; color: #888;}
+        input[type="range"] {
+            width: 100%;
+            cursor: pointer;
+            accent-color: #9b59b6;
+        }
+        .val { font-family: monospace; font-size: 0.85rem; background: #222; padding: 2px 6px; border-radius: 4px; float: right; color:#fff;}
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="ui">
+        <h1>day 085: the lightmap</h1>
+        <p>this scene has exactly <b>ZERO</b> lights. there are no point lights, no directional lights, and no ambient light.<br><br>all the light, shadow, and shading you see is permanently "painted" onto the texture map applying it procedurally.</p>
+        
+        <div class="control-group">
+            <label>lightMapIntensity <span id="val-intensity" class="val">1.0</span></label>
+            <input type="range" id="intensity" min="0" max="3" step="0.1" value="1.0">
+        </div>
+    </div>
+    <script type="module" src="./main.js"></script>
+</body>
+</html>
