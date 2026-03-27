@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>day 087 - particle basics</title>
+    <style>
+        body { margin: 0; overflow: hidden; background: #050510; color: white; font-family: 'Outfit', sans-serif;}
+        canvas { display: block; }
+        #ui {
+            position: absolute;
+            top: 40px;
+            left: 40px;
+            background: rgba(10, 10, 20, 0.85);
+            backdrop-filter: blur(15px);
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            max-width: 320px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+            z-index: 10;
+        }
+        h1 { margin: 0; font-size: 1.25rem; color: #ffeb3b; text-transform: lowercase; letter-spacing: 1.5px; }
+        p { margin: 12px 0 20px; font-size: 0.85rem; line-height: 1.6; opacity: 0.7; }
+        
+        .control-group { margin-bottom: 20px; }
+        .control-group label { display: block; font-size: 0.75rem; font-weight: bold; margin-bottom: 8px; text-transform: uppercase; color: #888;}
+        input[type="range"] {
+            width: 100%;
+            cursor: pointer;
+            accent-color: #ffeb3b;
+        }
+        .btn-group {
+            display: flex;
+            gap: 10px;
+        }
+        button {
+            flex: 1;
+            padding: 8px 10px;
+            background: #222;
+            color: #ccc;
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 6px;
+            cursor: pointer;
+            font-family: inherit;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            font-weight: 700;
+            transition: all 0.2s;
+        }
+        button:hover { background: #333; color: white;}
+        button.active { background: #ffeb3b; color: #000; border-color: #ffeb3b; }
+        
+        .val { font-family: monospace; font-size: 0.85rem; background: rgba(0,0,0,0.5); padding: 2px 6px; border-radius: 4px; float: right; color:#fff;}
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="ui">
+        <h1>day 087: naked vertices</h1>
+        <p>these aren't randomly generated stars. they are the exact vertices of standard geometry, stripped of their polygons and rendered as purely mathematical points.</p>
+        
+        <div class="control-group">
+            <label>Particle Size <span id="val-size" class="val">0.05</span></label>
+            <input type="range" id="size" min="0.01" max="0.5" step="0.01" value="0.05">
+        </div>
+
+        <div class="control-group">
+            <label>Base Geometry</label>
+            <div class="btn-group" id="geoGroup">
+                <button data-geo="sphere" class="active">Sphere</button>
+                <button data-geo="torus">Torus Knot</button>
+                <button data-geo="box">Box</button>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="./main.js"></script>
+</body>
+</html>
