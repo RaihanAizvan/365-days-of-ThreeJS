@@ -92,3 +92,4 @@ The early days focus on the fundamentals (vectors, coordinates, normalization, t
 - Day 084 — frustum management (`days/day-084`)
 - Day 085 — baking foundations (`days/day-085`)
 - Day 086 — probes workflow (`days/day-086`)
+- Day 087 — particle basics (`days/day-087`)
