@@ -94,3 +94,4 @@ The early days focus on the fundamentals (vectors, coordinates, normalization, t
 - Day 086 — probes workflow (`days/day-086`)
 - Day 087 — particle basics (`days/day-087`)
 - Day 088 — points geometry (`days/day-088`)
+- Day 089 — sprite materials (`days/day-089`)
