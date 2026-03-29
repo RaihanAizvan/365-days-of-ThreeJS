@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>day 088 - points geometry</title>
+    <style>
+        body { margin: 0; overflow: hidden; background: #000; font-family: 'Outfit', sans-serif;}
+        canvas { display: block; }
+        #ui {
+            position: absolute;
+            top: 40px;
+            left: 40px;
+            background: rgba(10, 10, 15, 0.85);
+            backdrop-filter: blur(15px);
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            max-width: 330px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+            color: white;
+            z-index: 10;
+        }
+        h1 { margin: 0; font-size: 1.25rem; color: #a29bfe; text-transform: lowercase; letter-spacing: 1.5px; }
+        p { margin: 12px 0 20px; font-size: 0.85rem; line-height: 1.6; opacity: 0.7; }
+        
+        .counter-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(255,255,255,0.05);
+            padding: 10px 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .counter-label { font-size: 0.75rem; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; color:#888; }
+        .counter-val { font-size: 1.2rem; font-family: monospace; font-weight: bold; color: #a29bfe; }
+        
+        .btn-group { display: flex; flex-direction: column; gap: 8px;}
+        button {
+            padding: 12px 15px;
+            background: #222;
+            color: #ccc;
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 6px;
+            cursor: pointer;
+            font-family: inherit;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            font-weight: 700;
+            transition: all 0.2s;
+            text-align: left;
+        }
+        button:hover { background: #333; color: white;}
+        button.active { background: #6c5ce7; color: #fff; border-color: #a29bfe; }
+        
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="ui">
+        <h1>day 088: raw geometry</h1>
+        <p>we are injecting purely mathematical procedural noise into a <span style="font-family: monospace">Float32Array</span> to dictate the absolute positioning of tens of thousands of naked vertices simultaneously.</p>
+        
+        <div class="counter-container">
+            <span class="counter-label">Total Points</span>
+            <span class="counter-val" id="totalCount">30,000</span>
+        </div>
+
+        <div class="btn-group" id="shapeGroup">
+            <button data-shape="cube" class="active">Random Cube Noise</button>
+            <button data-shape="sphere">Spherical Shell Distribution</button>
+            <button data-shape="galaxy">Spiral Galaxy Math</button>
+        </div>
+    </div>
+    <script type="module" src="./main.js"></script>
+</body>
+</html>
